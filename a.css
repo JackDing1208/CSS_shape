@@ -1,3 +1,13 @@
+    .clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+    }
+* {
+  margin: 0px;
+  padding: 0px;}
+
+
     .yin-yang {
       width: 192px;
       box-sizing: content-box;
@@ -8,6 +18,8 @@
       border-width: 2px 2px 92px 2px;
       border-radius: 100%;
       position: relative;
+      animation: turn 1.5s linear infinite;
+      float: left;
     }
     .yin-yang:before {
       content: "";
@@ -33,3 +45,26 @@
       height: 24px;
       box-sizing: content-box;
     }
+
+    @keyframes turn{
+      0%{transform:rotate(0deg);}
+      100%{transform:rotate(360deg);}
+    }
+
+    h1{
+      writing-mode: vertical-lr;
+      float: left;
+      margin: 28px 0;
+    }
+
+    .taiji{
+      height:100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+      
